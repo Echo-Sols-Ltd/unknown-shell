@@ -1,11 +1,18 @@
 'use client'
 
+export const dynamic = 'force-dynamic'
+
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/hooks/useAuth'
 import DashboardLayout from '@/components/DashboardLayout'
 import StatsCards from '@/components/dashboard/StatsCards'
-import ShellTerminal from '@/components/shell/ShellTerminal'
+import dynamic from 'next/dynamic'
+
+const ShellTerminal = dynamic(() => import('@/components/shell/ShellTerminal'), {
+  ssr: false,
+  loading: () => <div className="flex items-center justify-center h-full"><div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary-500"></div></div>
+})
 import InsightsChart from '@/components/dashboard/InsightsChart'
 import RecentActivity from '@/components/dashboard/RecentActivity'
 import SystemMetrics from '@/components/dashboard/SystemMetrics'
