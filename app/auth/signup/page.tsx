@@ -157,7 +157,7 @@ export default function SignupPage() {
         </div>
 
         <p className="text-center text-dark-500 text-sm mt-6">
-          Built for Rwanda 🇷🇼
+          Professional Shell Platform
         </p>
       </div>
     </div>

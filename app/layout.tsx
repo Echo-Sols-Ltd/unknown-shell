@@ -18,7 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: 'Unknown Shell - Professional Shell SaaS Platform',
-  description: 'Powerful shell system with dashboard and insights for Rwanda',
+  description: 'Powerful shell system with dashboard and insights for developers worldwide',
 }
 
 export default function RootLayout({
