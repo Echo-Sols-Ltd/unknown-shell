@@ -26,7 +26,7 @@ export default function DashboardLayout({ children, activeTab, setActiveTab }: D
       {/* Mobile header */}
       <div className="lg:hidden bg-dark-800 border-b border-dark-700 p-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <Terminal className="w-6 h-6 text-primary-400" />
+          <Terminal className="w-6 h-6 text-accent" />
           <span className="text-white font-bold">Unknown Shell</span>
         </div>
         <button
@@ -45,9 +45,14 @@ export default function DashboardLayout({ children, activeTab, setActiveTab }: D
           } lg:translate-x-0 fixed lg:static inset-y-0 left-0 z-50 w-64 bg-dark-800 border-r border-dark-700 transition-transform duration-300 ease-in-out`}
         >
           <div className="h-full flex flex-col">
-            <div className="p-6 border-b border-dark-700">
+              <div className="p-6 border-b border-dark-700">
               <div className="flex items-center space-x-2">
-                <Terminal className="w-8 h-8 text-primary-400" />
+                <div className="grid grid-cols-2 gap-1">
+                  <div className="w-2 h-2 bg-accent rounded"></div>
+                  <div className="w-2 h-2 bg-dark-600 rounded"></div>
+                  <div className="w-2 h-2 bg-dark-600 rounded"></div>
+                  <div className="w-2 h-2 bg-accent rounded"></div>
+                </div>
                 <span className="text-white font-bold text-xl">Unknown Shell</span>
               </div>
               <p className="text-dark-400 text-sm mt-1">SaaS Platform</p>
@@ -61,7 +66,7 @@ export default function DashboardLayout({ children, activeTab, setActiveTab }: D
                 }}
                 className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
                   activeTab === 'overview'
-                    ? 'bg-primary-500/20 text-primary-400 border border-primary-500/30'
+                    ? 'bg-accent/20 text-accent border border-accent/30'
                     : 'text-dark-300 hover:bg-dark-700 hover:text-white'
                 }`}
               >
@@ -76,7 +81,7 @@ export default function DashboardLayout({ children, activeTab, setActiveTab }: D
                 }}
                 className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
                   activeTab === 'shell'
-                    ? 'bg-primary-500/20 text-primary-400 border border-primary-500/30'
+                    ? 'bg-accent/20 text-accent border border-accent/30'
                     : 'text-dark-300 hover:bg-dark-700 hover:text-white'
                 }`}
               >
@@ -91,7 +96,7 @@ export default function DashboardLayout({ children, activeTab, setActiveTab }: D
                 }}
                 className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
                   activeTab === 'insights'
-                    ? 'bg-primary-500/20 text-primary-400 border border-primary-500/30'
+                    ? 'bg-accent/20 text-accent border border-accent/30'
                     : 'text-dark-300 hover:bg-dark-700 hover:text-white'
                 }`}
               >

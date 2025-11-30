@@ -48,10 +48,10 @@ export default function InsightsChart() {
           <Line
             type="monotone"
             dataKey="commands"
-            stroke="#0ea5e9"
+            stroke="#00ff00"
             strokeWidth={2}
             name="Commands"
-            dot={{ fill: '#0ea5e9', r: 4 }}
+            dot={{ fill: '#00ff00', r: 4 }}
           />
           <Line
             type="monotone"

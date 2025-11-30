@@ -57,8 +57,8 @@ export default function SignupPage() {
       <div className="w-full max-w-md">
         <div className="bg-dark-800/50 backdrop-blur-lg rounded-2xl shadow-2xl p-8 border border-dark-700">
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-500/20 rounded-full mb-4">
-              <Terminal className="w-8 h-8 text-primary-400" />
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/20 rounded-full mb-4">
+              <Terminal className="w-8 h-8 text-accent" />
             </div>
             <h1 className="text-3xl font-bold text-white mb-2">Create Account</h1>
             <p className="text-dark-400">Join Unknown Shell Platform</p>
@@ -140,7 +140,7 @@ export default function SignupPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white py-3 rounded-lg font-semibold hover:from-primary-600 hover:to-primary-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-primary-500/50"
+              className="w-full bg-accent text-dark-900 py-3 rounded-lg font-semibold hover:bg-accent-light transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-accent/50"
             >
               {loading ? 'Creating account...' : 'Create Account'}
             </button>
@@ -149,7 +149,7 @@ export default function SignupPage() {
           <div className="mt-6 text-center">
             <p className="text-dark-400">
               Already have an account?{' '}
-              <Link href="/auth/login" className="text-primary-400 hover:text-primary-300 font-medium">
+              <Link href="/auth/login" className="text-accent hover:text-accent-light font-medium">
                 Sign in
               </Link>
             </p>
