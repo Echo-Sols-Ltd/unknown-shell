@@ -243,7 +243,7 @@ export default function LandingPage() {
                 </div>
                 <span className="text-white font-bold">Unknown Shell</span>
               </div>
-              <p className="text-dark-400 text-sm">Professional Shell SaaS Platform for Rwanda and beyond.</p>
+              <p className="text-dark-400 text-sm">Professional Shell SaaS Platform for developers worldwide.</p>
             </div>
             <div>
               <h4 className="text-white font-semibold mb-4">Product</h4>
@@ -270,7 +270,7 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="border-t border-dark-700 pt-8 text-center">
-            <p className="text-dark-400 text-sm">© 2024 Unknown Shell. Built for Rwanda 🇷🇼</p>
+            <p className="text-dark-400 text-sm">© 2024 Unknown Shell. All rights reserved.</p>
           </div>
         </div>
       </footer>
