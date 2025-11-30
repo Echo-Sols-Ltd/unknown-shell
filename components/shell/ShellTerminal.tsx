@@ -23,7 +23,6 @@ export default function ShellTerminal() {
         background: '#0f172a',
         foreground: '#e2e8f0',
         cursor: '#0ea5e9',
-        selection: '#1e293b',
         black: '#0f172a',
         red: '#ef4444',
         green: '#10b981',
@@ -68,6 +67,35 @@ export default function ShellTerminal() {
 
     // Handle input
     let currentLine = ''
+    const executeCommand = async (command: string) => {
+      const term = xtermRef.current
+      if (!term) return
+
+      try {
+        const token = localStorage.getItem('token')
+        const response = await axios.post(
+          '/api/shell/execute',
+          { command },
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        )
+
+        if (response.data.output) {
+          term.writeln(response.data.output)
+        }
+        if (response.data.error) {
+          term.writeln(`\x1b[31mError: ${response.data.error}\x1b[0m`)
+        }
+      } catch (error: any) {
+        // Mock command execution for development
+        const mockOutput = getMockCommandOutput(command)
+        term.writeln(mockOutput)
+      } finally {
+        term.write('\x1b[32m$ \x1b[0m')
+      }
+    }
+
     term.onData((data) => {
       if (data === '\r') {
         // Enter pressed
@@ -107,36 +135,8 @@ export default function ShellTerminal() {
       window.removeEventListener('resize', handleResize)
       term.dispose()
     }
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
-  const executeCommand = async (command: string) => {
-    const term = xtermRef.current
-    if (!term) return
-
-    try {
-      const token = localStorage.getItem('token')
-      const response = await axios.post(
-        '/api/shell/execute',
-        { command },
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      )
-
-      if (response.data.output) {
-        term.writeln(response.data.output)
-      }
-      if (response.data.error) {
-        term.writeln(`\x1b[31mError: ${response.data.error}\x1b[0m`)
-      }
-    } catch (error: any) {
-      // Mock command execution for development
-      const mockOutput = getMockCommandOutput(command)
-      term.writeln(mockOutput)
-    } finally {
-      term.write('\x1b[32m$ \x1b[0m')
-    }
-  }
 
   const getMockCommandOutput = (command: string): string => {
     const cmd = command.toLowerCase().trim()
