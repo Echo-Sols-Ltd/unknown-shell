@@ -117,12 +117,7 @@ export default function DocsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="grid grid-cols-2 gap-1">
-                <div className="w-2 h-2 bg-accent rounded"></div>
-                <div className="w-2 h-2 bg-dark-600 rounded"></div>
-                <div className="w-2 h-2 bg-dark-600 rounded"></div>
-                <div className="w-2 h-2 bg-accent rounded"></div>
-              </div>
+              <img src="/logo-icon.svg" alt="Unknown Shell" className="w-6 h-6" />
               <span className="text-white font-semibold text-sm">Unknown Shell</span>
             </Link>
             <Link href="/dashboard" className="text-dark-300 hover:text-accent flex items-center gap-2 text-sm">
@@ -203,12 +198,7 @@ export default function DocsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <div>
               <div className="flex items-center space-x-2 mb-3">
-                <div className="grid grid-cols-2 gap-1">
-                  <div className="w-2 h-2 bg-accent rounded"></div>
-                  <div className="w-2 h-2 bg-dark-600 rounded"></div>
-                  <div className="w-2 h-2 bg-dark-600 rounded"></div>
-                  <div className="w-2 h-2 bg-accent rounded"></div>
-                </div>
+                <img src="/logo-icon.svg" alt="Unknown Shell" className="w-6 h-6" />
                 <span className="text-white font-semibold text-sm">Unknown Shell</span>
               </div>
               <p className="text-dark-400 text-xs">Professional Shell SaaS Platform</p>

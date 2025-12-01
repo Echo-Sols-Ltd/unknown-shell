@@ -26,7 +26,7 @@ export default function DashboardLayout({ children, activeTab, setActiveTab }: D
       {/* Mobile header */}
       <div className="lg:hidden bg-dark-800 border-b border-dark-700 p-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <Terminal className="w-6 h-6 text-accent" />
+          <img src="/logo-icon.svg" alt="Unknown Shell" className="w-6 h-6" />
           <span className="text-white font-bold">Unknown Shell</span>
         </div>
         <button
@@ -47,12 +47,7 @@ export default function DashboardLayout({ children, activeTab, setActiveTab }: D
           <div className="h-full flex flex-col">
               <div className="p-6 border-b border-dark-700">
               <div className="flex items-center space-x-2">
-                <div className="grid grid-cols-2 gap-1">
-                  <div className="w-2 h-2 bg-accent rounded"></div>
-                  <div className="w-2 h-2 bg-dark-600 rounded"></div>
-                  <div className="w-2 h-2 bg-dark-600 rounded"></div>
-                  <div className="w-2 h-2 bg-accent rounded"></div>
-                </div>
+                <img src="/logo-icon.svg" alt="Unknown Shell" className="w-8 h-8" />
                 <span className="text-white font-bold text-xl">Unknown Shell</span>
               </div>
               <p className="text-dark-400 text-sm mt-1">SaaS Platform</p>

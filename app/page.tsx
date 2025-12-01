@@ -17,15 +17,10 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <div className="flex items-center space-x-3">
-              <div className="grid grid-cols-2 gap-1">
-                <div className="w-3 h-3 bg-accent rounded"></div>
-                <div className="w-3 h-3 bg-dark-600 rounded"></div>
-                <div className="w-3 h-3 bg-dark-600 rounded"></div>
-                <div className="w-3 h-3 bg-accent rounded"></div>
-              </div>
+            <Link href="/" className="flex items-center space-x-3">
+              <img src="/logo-icon.svg" alt="Unknown Shell" className="w-8 h-8" />
               <span className="text-white font-bold text-xl">Unknown Shell</span>
-            </div>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
@@ -235,12 +230,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="grid grid-cols-2 gap-1">
-                  <div className="w-3 h-3 bg-accent rounded"></div>
-                  <div className="w-3 h-3 bg-dark-600 rounded"></div>
-                  <div className="w-3 h-3 bg-dark-600 rounded"></div>
-                  <div className="w-3 h-3 bg-accent rounded"></div>
-                </div>
+                <img src="/logo-icon.svg" alt="Unknown Shell" className="w-8 h-8" />
                 <span className="text-white font-bold">Unknown Shell</span>
               </div>
               <p className="text-dark-400 text-sm">Professional Shell SaaS Platform for developers worldwide.</p>

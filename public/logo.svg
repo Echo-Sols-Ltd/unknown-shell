@@ -1,0 +1,38 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <circle cx="100" cy="100" r="95" fill="url(#gradient)" opacity="0.1"/>
+  
+  <!-- Terminal window frame -->
+  <rect x="30" y="40" width="140" height="120" rx="8" fill="none" stroke="#00ff00" stroke-width="3"/>
+  
+  <!-- Terminal window header -->
+  <rect x="30" y="40" width="140" height="25" rx="8" fill="#00ff00" opacity="0.2"/>
+  <circle cx="45" cy="52.5" r="4" fill="#ff5f57"/>
+  <circle cx="60" cy="52.5" r="4" fill="#ffbd2e"/>
+  <circle cx="75" cy="52.5" r="4" fill="#28ca42"/>
+  
+  <!-- Terminal prompt -->
+  <text x="40" y="90" font-family="monospace" font-size="14" fill="#00ff00">$</text>
+  <rect x="55" y="80" width="8" height="12" fill="#00ff00" opacity="0.8"/>
+  
+  <!-- Terminal output lines -->
+  <rect x="40" y="105" width="60" height="2" fill="#00ff00" opacity="0.6"/>
+  <rect x="40" y="115" width="80" height="2" fill="#00ff00" opacity="0.4"/>
+  <rect x="40" y="125" width="50" height="2" fill="#00ff00" opacity="0.4"/>
+  
+  <!-- Globe/World icon overlay -->
+  <circle cx="150" cy="60" r="25" fill="none" stroke="#00ff00" stroke-width="2" opacity="0.8"/>
+  <path d="M 125 60 Q 137.5 50 150 60 Q 162.5 70 175 60" stroke="#00ff00" stroke-width="2" fill="none" opacity="0.8"/>
+  <path d="M 125 60 Q 137.5 70 150 60 Q 162.5 50 175 60" stroke="#00ff00" stroke-width="2" fill="none" opacity="0.8"/>
+  <circle cx="140" cy="55" r="2" fill="#00ff00"/>
+  <circle cx="160" cy="65" r="2" fill="#00ff00"/>
+  
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00cc00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
+
